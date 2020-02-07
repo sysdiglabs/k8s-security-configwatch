@@ -1,0 +1,24 @@
+name: 'Kubernetes Security Lint'
+description: 'Run security lint check against Kubernetes workloads when a PR is open.'
+inputs:
+  sourceDir:
+    description: 'Source directory of YAML files (master)'
+    required: true
+    default: ''
+  targetDir:
+    description: 'Target directory of YAML files (PR branch)'
+    required: true
+    default: ''
+outputs:
+  escalation_report:
+    description: 'Security Lint Report (in JSON format)'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.sourceDir }}
+    - ${{ inputs.targetDir }}
+branding:
+  icon: alert-circle
+  color: blue
+
