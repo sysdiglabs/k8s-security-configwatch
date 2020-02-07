@@ -12,9 +12,9 @@ This Git Action run security lint check against Kubernetes workloads when a PR i
 
 **Required** The target directory for k8s workload yaml. (PR branch)
 
-### Use Cases
+## Use Cases
 0. Integrate the `k8s-security-lint` action into the git workflow.
-1. Examine the following security attributes changes in a PR:
+1. Examine the following security attributes changes in k8s workload YAMLs in a PR:
 - `Privileged`
 - `HostPID`
 - `HostIPC`
