@@ -1,6 +1,6 @@
 # Kubernetes Privilege Escalation Check
 
-This action checks k8s workload privilege escalation when a PR is open
+This Git Action run security lint check against Kubernetes workloads when a PR is open.
 
 ## Inputs
 
@@ -11,6 +11,23 @@ This action checks k8s workload privilege escalation when a PR is open
 ### `targetDir`
 
 **Required** The target directory for k8s workload yaml. (PR branch)
+
+### Use Cases
+0. Integrate the `k8s-security-lint` action into the git workflow.
+1. Examine the following security attributes changes in a PR:
+- `Privileged`
+- `HostPID`
+- `HostIPC`
+- `HostNetwork`
+- `Capabilities`
+- `ReadOnlyRootFileSystem`
+- `RunAsUser` (root/nonroot)
+- `RunAsGroup` (root/nonroot)
+- volume types
+2. Define your own criteria based on the lint result, for example:
+- Send lint report to slack channel if `priivleged` mode is set to true
+- Fail the check on the PR if some host level namespaces are enabled. (`hostNetwork` etc.)
+- Assign extra reviewers (security architect/engineer) to the PR.
 
 ## Example Usage in Git workflow
 ```
