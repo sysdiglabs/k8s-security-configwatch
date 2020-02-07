@@ -42,8 +42,8 @@ This Git Action run security lint check against Kubernetes workloads when a PR i
       path: candidate
       ref: ${{ github.event.pull_request.head.sha }}
 # pass the yamls directory to k8s-privilege-check git action
-- name: K8s workload privilege escalation check
-  uses: Kaizhe/k8s-privilege-check@v1.0.0
+- name: Kubernetes Security Lint
+  uses: sysdiglabs/k8s-security-lint@v1.0.0
   with:
     sourceDir: '/master/yamls'
     targetDir: '/candidate/yamls'
