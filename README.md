@@ -25,7 +25,7 @@ This Git Action run security lint check against Kubernetes workloads when a PR i
 - `RunAsGroup` (root/nonroot)
 - volume types
 2. Define your own criteria based on the lint result, for example:
-- Send lint report to slack channel if `priivleged` mode is set to true
+- Send lint report to slack channel if `privileged` mode is set to true
 - Fail the check on the PR if some host level namespaces are enabled. (`hostNetwork` etc.)
 - Assign extra reviewers (security architect/engineer) to the PR.
 
