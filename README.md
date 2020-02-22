@@ -1,6 +1,6 @@
-# Kubernetes Privilege Escalation Check
+# Kubernetes Security Lint
 
-This Git Action run security lint check against Kubernetes workloads when a PR is open.
+This Git Action run security lint check against Kubernetes workloads in Git workflow (PR open, commit pushed etc.).
 
 ## Inputs
 
