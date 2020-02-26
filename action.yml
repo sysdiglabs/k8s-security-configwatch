@@ -1,5 +1,5 @@
-name: 'Kubernetes Security Lint'
-description: 'Run security lint check against Kubernetes workloads when a PR is open.'
+name: 'Kubernetes Security Config Watch'
+description: 'Run security privilege comparison against Kubernetes workloads when a PR is open.'
 inputs:
   sourceDir:
     description: 'Source directory of YAML files (master)'
