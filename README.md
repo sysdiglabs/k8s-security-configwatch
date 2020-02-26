@@ -1,4 +1,4 @@
-# Kubernetes Security Lint
+# Kubernetes Security Config Watch
 
 This Git Action run security lint check against Kubernetes workloads in Git workflow (PR open, commit pushed etc.).
 
